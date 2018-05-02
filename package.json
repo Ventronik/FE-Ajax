@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/Ventronik/FE-Ajax/issues"
   },
-  "homepage": "https://github.com/Ventronik/FE-Ajax#readme"
+  "homepage": "https://github.com/Ventronik/FE-Ajax#readme",
+  "dependencies": {}
 }
