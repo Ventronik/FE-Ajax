@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
 
-    <title>Blog Template for Bootstrap</title>
+    <title>For the many discussion relating the military advances in derigible destructive devices</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -29,22 +29,28 @@
       <div class="container">
         <nav class="nav blog-nav">
           <a class="nav-link active" href="#">Home</a>
-          <button class="nav-link post-modal btn btn-primary" type="button" ata-toggle="modal" data-target="#postModal">Post a post</button>
+          <a class="nav-link post-modal" data-toggle="modal" data-target="#exampleModal">Post a post</a>
         </nav>
       </div>
     </div>
 
-    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Create a new Post</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <form>
+              <label for="postTitle">Post Title</label>
+              <input type="text" class="form-control" id="postTitle" aria-describedby="post title" placeholder="Title of the post" name="title">
+
+              <label for="postBody">Post Body</label>
+              <textarea class="form-control" id="postBody" rows="18" type="text" aria-describedby="post body" placeholder="Content of the post" name="body"></textarea>
+            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -171,7 +177,6 @@
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script defer src="/src/helpers.js"></script>
     <script src="../js/classes/Posts.js"></script>
     <script src="../js/index.js"></script>
 
