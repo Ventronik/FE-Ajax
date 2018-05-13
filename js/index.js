@@ -1,36 +1,40 @@
-//////////////////////////////////////////////////////////////////////////////
-// Build Published Paper Section for easy browsing.
-//////////////////////////////////////////////////////////////////////////////
-
 (function() {
   'use strict';
-
-  request('/posts')
+  request('/')
   .then(function(response){
-    // console.log(response.data.data)
     const posts = new Posts (
-                          response.data.data ,
-                          document.querySelector('#published-Papers'),
-                        )
+                    response.data.data ,
+                    document.querySelector('.blog-main'),
+                  )
+                        // console.log(posts)
                   posts.render(posts)
-
-
-          let cards = document.querySelectorAll('.portfolio-item')
-
-          cards.forEach(function(elem) {
-            elem.addEventListener("click", myModal(elem));
-          })
   })
   .catch(function(error){
     // user is not authenticated
     console.log(error)
   })
 
-  function myModal(paper){
-    return function(event){
-      document.querySelector('#paperModalLabel').innerHTML = paper.getAttribute('data-title')
-      document.querySelector('.modal-abstract').innerHTML = paper.getAttribute('data-abstract')
+  function submit(event){
+    event.preventDefault()
 
-    }
+    const title = document.querySelector('#postTitle').value
+    const body = document.querySelector('#postBody').value
+
+    request('/post', 'post', {title, body})
+    .then(()=> window.location.reload())
+      // .then(function(response){
+        // return request(`/post`, 'post', {title, post})
+      // })
+      // .then(function(response){
+      //   const posts = new Posts (
+      //                   response.data.data ,
+      //                   document.querySelector('.blog-main'),
+      //                 )
+      //                       // console.log(posts)
+      //                 posts.render(posts)
+      // })
   }
+  let form = document.querySelector('#post-form')
+  form.addEventListener('submit',(event) => submit(event))
+
 })()

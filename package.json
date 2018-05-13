@@ -16,5 +16,7 @@
     "url": "https://github.com/Ventronik/FE-Ajax/issues"
   },
   "homepage": "https://github.com/Ventronik/FE-Ajax#readme",
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
