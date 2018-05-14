@@ -21,6 +21,21 @@ class Posts{
     content.innerHTML = postData.body
     div.appendChild(content)
 
+
+    const update = document.createElement('button')
+    addClassesToElement(update, 'btn', 'btn-info', 'editModal')
+    update.setAttribute('uuid', `${postData.uuid}`)
+    update.setAttribute('data-toggle', 'modal')
+    update.setAttribute('data-target', '#editModal')
+    update.innerHTML = 'update'
+    div.appendChild(update)
+
+    const deletor = document.createElement('button')
+    addClassesToElement(deletor, 'btn-danger', 'btn')
+    deletor.setAttribute('uuid', `${postData.uuid}`)
+    deletor.innerHTML = 'delete'
+    div.appendChild(deletor)
+
     return div
   }
 

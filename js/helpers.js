@@ -3,7 +3,7 @@
 
 function request(path, method = 'get', body = null) {
 
-  return axios(`https://warm-island-17226.herokuapp.com/${path}`, {
+  return axios(`http://localhost:3000${path}`, {
     method: method,
     headers: {
       'Content-Type': 'application/json',
@@ -16,6 +16,7 @@ function request(path, method = 'get', body = null) {
 //////////////////////////////////////////
 // Helper functions
 //////////////////////////////////////////
+
 
 function empty(element){
   while(element.firstChild){
