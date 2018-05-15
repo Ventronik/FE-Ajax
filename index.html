@@ -111,17 +111,17 @@
             </button>
           </div>
           <div class="modal-body">
-            <form id="post-form">
+            <form id="post-edit">
               <label for="postTitle">Edit Title</label>
-              <input type="text" class="form-control" id="postTitle" aria-describedby="post title" placeholder="Title of the post" name="title">
+              <input type="text" class="form-control" id="editTitle" aria-describedby="post title" placeholder="Title of the post" name="title">
 
               <label for="postBody">Edit Body</label>
-              <textarea class="form-control" id="postBody" rows="18" type="text" aria-describedby="post body" placeholder="Content of the post" name="body"></textarea>
+              <textarea class="form-control" id="editBody" rows="18" type="text" aria-describedby="post body" placeholder="Content of the post" name="body"></textarea>
             </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary post-button"form="post-form">Save changes</button>
+            <button type="submit" id="submitEdit" class="btn btn-primary post-edit" form="post-edit">Save changes</button>
           </div>
         </div>
       </div>
